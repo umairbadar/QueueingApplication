@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="12">
+
+        <TextView
+            android:id="@+id/tv_bayArm"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:typeface="serif" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/loading_hsd_min" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:maxHeight="10dip"
+                android:minHeight="10dip"
+                android:progress="50"
+                android:progressDrawable="@drawable/progress"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5s"
+                android:layout_alignRight="@+id/progressBar"
+                android:layout_alignLeft="@+id/progressBar"
+                android:layout_alignBottom="@+id/progressBar"
+                android:layout_alignTop="@+id/progressBar"
+                android:textColor="@color/white"
+                android:paddingLeft="50dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#dddddd"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:text="Status"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Skully:"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/tv_skully"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Over fill:"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/tv_overFill"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#dddddd"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:text="Order Details"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="SAP Ref"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/sapref"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Tank"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/tank"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Controller"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/batch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Type:"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Product:"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/product"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Volume:"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Customer:"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/customer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="right"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Vehicle:"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/vehicle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_content"
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#dddddd"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:text="Chamber Details"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1.5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Chamber"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Fillable Qty"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/tv_border_head"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Set Volume"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewChamberDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

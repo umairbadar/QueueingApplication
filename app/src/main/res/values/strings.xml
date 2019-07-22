@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Queueing Application</string>
+    <string name="site_name">Site Name</string>
+    <string name="manager_name">Manager Name</string>
+</resources>

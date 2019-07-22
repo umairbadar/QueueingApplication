@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tv_chamber_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tv_border_content"
+            android:text="Chamber"
+            android:textSize="16sp"
+            android:typeface="serif"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tv_fillable_volume"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tv_border_content"
+            android:textSize="16sp"
+            android:typeface="serif"
+            android:text="Fillable Volume"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tv_set_volume"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tv_border_content"
+            android:text="Set Volume"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:typeface="serif" />
+
+    </LinearLayout>
+
+</LinearLayout>
