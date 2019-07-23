@@ -68,14 +68,14 @@ public class Fragment_Control_Room extends Fragment {
         mycontrolroom = new ArrayList<>();
         getdata();
 
-        final Handler someHandler1 = new Handler(getActivity().getMainLooper());
+       /* final Handler someHandler1 = new Handler(getActivity().getMainLooper());
         someHandler1.postDelayed(new Runnable() {
             @Override
             public void run() {
                 getdata();
                 someHandler1.postDelayed(this, 30000);
             }
-        }, 10);
+        }, 10);*/
     }
 
     public void getdata() {
@@ -148,7 +148,6 @@ public class Fragment_Control_Room extends Fragment {
                                                 drivername,
                                                 batch1,
                                                 customer
-
                                         );
                                         mycontrolroom.add(item);
                                     }

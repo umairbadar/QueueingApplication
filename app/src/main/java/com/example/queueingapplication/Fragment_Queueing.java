@@ -211,22 +211,27 @@ public class Fragment_Queueing extends Fragment {
                             jsonArray1 = jsonObject.getJSONArray("waiting_before_bay");
                             for (int i = 0; i < jsonArray1.length(); i++) {
                                 JSONObject object = jsonArray1.getJSONObject(i);
-                                JSONObject order = object.getJSONObject("has_order");
-                                JSONObject order_type_detail = order.getJSONObject("order_type_detail");
-                                String order_type = order_type_detail.getString("name");
-                                JSONObject product_detail = order.getJSONObject("product_detail");
-                                String product = product_detail.getString("name");
-                                String qty = order.getString("quantity");
-                                JSONObject customer_detail = order.getJSONObject("customer_detail");
-                                String customer = customer_detail.getString("name");
+                                JSONObject get_vehicle = object.getJSONObject("get_vehicle");
+                                JSONArray has_assigned_vehicle = get_vehicle.getJSONArray("has_assigned_vehicle");
+                                for (int j = 0; j < has_assigned_vehicle.length(); j++){
+                                    JSONObject  innerObj = has_assigned_vehicle.getJSONObject(j);
+                                    JSONObject  has_order = innerObj.getJSONObject("has_order");
+                                    String quantity = has_order.getString("quantity");
+                                    JSONObject product_detail = has_order.getJSONObject("product_detail");
+                                    String product = product_detail.getString("name");
+                                    JSONObject order_type_detail = has_order.getJSONObject("order_type_detail");
+                                    String order_type = order_type_detail.getString("name");
+                                    JSONObject customer_detail = has_order.getJSONObject("customer_detail");
+                                    String customer = customer_detail.getString("name");
 
-                                Model_BeforeBay item = new Model_BeforeBay(
-                                        order_type,
-                                        product,
-                                        qty,
-                                        customer
-                                );
-                                beforeBay_list.add(item);
+                                    Model_BeforeBay item = new Model_BeforeBay(
+                                            order_type,
+                                            product,
+                                            quantity,
+                                            customer
+                                    );
+                                    beforeBay_list.add(item);
+                                }
                             }
                             beforeBay_adapter = new Adapter_BeforeBay(beforeBay_list, getContext());
                             recyclerViewBeforeBay.setAdapter(beforeBay_adapter);

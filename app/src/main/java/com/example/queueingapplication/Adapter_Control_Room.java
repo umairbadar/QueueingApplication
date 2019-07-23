@@ -100,7 +100,7 @@ public class Adapter_Control_Room extends RecyclerView.Adapter<Adapter_Control_R
         if (chamber_name.contains(",")){
             String[] names = chamber_name.split(",");
             String[] qty = fillable_qty.split(",");
-            for (int j = 0; j < names.length; j++){
+            for (int j = 0; j < qty.length; j++){
                 Model_ChamberDetails inner_item = new Model_ChamberDetails(
                         names[j],
                         qty[j],
@@ -118,7 +118,6 @@ public class Adapter_Control_Room extends RecyclerView.Adapter<Adapter_Control_R
         }
         adapter = new Adapter_ChamberDetails(chamberDetails_list,context);
         holder.recyclerViewChamberDetails.setAdapter(adapter);
-
 
     }
 
